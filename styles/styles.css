@@ -7,20 +7,92 @@
   list-style: none;
 }
 
-
-header {
-  display: flex;
-  align-items: center;
-  background-color: #ff2;
-}
-
-header > div {
-  display: flex;
-  align-items: center;
-}
-
-
 .container {
   max-width: 1200px;
   margin: auto;
 }
+
+body {
+  height: 100vh;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 15px;
+  height: 8%;
+  background-color: gray;
+}
+
+header > div img {
+  width: 100px
+}
+
+header i, header span {
+  color: #fff;
+}
+
+header > div:first-child,  header > div nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* HEADER NAV */
+
+header nav div:first-child  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+header nav div:first-child span {
+  font-weight: bold;
+}
+
+/* HEADER INPUT */
+
+header nav > div:last-child {
+  height: 25px;
+  width: 400px;
+  position: relative;
+}
+
+header nav > div:last-child input{
+  height: 100%;
+  width: 100%;
+  padding: 12px 10px;
+
+  border: none;
+  border-radius: 2px;
+  background: #fff2;
+}
+
+header nav > div:last-child input::placeholder{
+  color: #fff;
+}
+
+
+header nav > div:last-child i{
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/* HEADER USER AND NOTIFICATION */
+
+header > div:last-child {
+  margin-right: 20px;
+}
+
+header > div:last-child i {
+  font-size: 28px;
+  margin-left: 20px;
+}
+
