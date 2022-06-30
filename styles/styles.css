@@ -30,6 +30,7 @@ i:not(header nav > div:last-child i), button{
 p {
   font-size: 0.9rem;
 }
+
 /* HEADER */
 
 header {
@@ -94,7 +95,7 @@ header nav > div:last-child input{
   
   border: none;
   border-radius: 2px;
-  background: #fff2;
+  background: #356b6578;
 }
 
 header nav > div:last-child input:focus{
