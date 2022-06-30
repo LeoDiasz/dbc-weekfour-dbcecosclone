@@ -23,6 +23,14 @@ i:not(header nav > div:last-child i), button{
   cursor: pointer;
 }
 
+
+.border-bottom {
+  border-bottom: 1px solid gainsboro;
+}
+
+p {
+  font-size: 0.9rem;
+}
 /* HEADER */
 
 header {
@@ -32,11 +40,13 @@ header {
 
   padding: 20px 15px;
   height: 8%;
-  background: url("../assets/bannerheader.png"), linear-gradient(0deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 74%);
+  background: url("../assets/bannerheader.png"), linear-gradient(359deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 80%);
+  
 }
 
 header > div img {
-  width: 100px
+  width: 100px;
+  margin-right: 20px;
 }
 
 header i, header span {
@@ -46,17 +56,18 @@ header i, header span {
 header > div:first-child,  header > div nav {
   display: flex;
   align-items: center;
-  gap: 30px;
 }
 
 /* HEADER NAV */
 
-header nav div:first-child  {
-  padding: 10px;
+header nav  > div:first-child  {
   display: flex;
   align-items: center;
+  
+  padding: 10px;
   gap: 10px;
   font-size: 20px;
+  margin-right: 8px;
 }
 
 header nav div:first-child:hover {
@@ -71,7 +82,7 @@ header nav div:first-child span {
 /* HEADER INPUT */
 
 header nav > div:last-child {
-  height: 25px;
+  height: 30px;
   width: 400px;
   position: relative;
 }
@@ -97,12 +108,11 @@ header nav > div:last-child input::placeholder{
   color: #fff;
 }
 
-
 header nav > div:last-child i{
   font-size: 15px;
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 8px;
 }
 
 /* HEADER USER AND NOTIFICATION */
@@ -126,18 +136,16 @@ header > div:last-child i:last-child {
 /* MAIN */
 
 main {
-  background-color: aliceblue;
+  background-color: #EFF3F8;
   height: 100%;
 }
 
 main .container {
   display: grid;
   grid-template-columns: 675px 450px;
+  height: 100%;
   gap: 20px;
   padding: 25px 0;
-  height: 100%;
-
-
 }
 
 .recent-news, aside {
@@ -147,8 +155,7 @@ main .container {
 .recent-news, .system-and-process, .birthdays{
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 1px 1px 4px gainsboro;
-  padding: 15px;
+  box-shadow: 0 0 5px gainsboro;
 }
 
 .recent-news, .list-notices {
@@ -157,10 +164,14 @@ main .container {
   gap: 20px;
 }
 
-.list-notices {
-  height: 100%;
+.recent-news > div h5, .system-and-process > div h5 {
+  padding: 15px;
 }
 
+.list-notices {
+  height: 100%;
+  padding: 0 15px;
+}
 
 /* CARDS NOTICES */
 
@@ -170,7 +181,7 @@ main .container {
   height: 200px;
   
   cursor: pointer;
-  box-shadow: 1px 1px 4px gray;
+  box-shadow: 0 4px 15px gainsboro;
   border-radius: 6px;
 }
 
@@ -180,61 +191,55 @@ main .container {
   object-fit: contain;
 }
 
-
 .list-notices > div > div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-right: 15px;
+  padding: 15px 15px 0 0;
   height: 100%;
   overflow: hidden;
 }
 
+.list-notices > div > div h4 {
+  margin-bottom: -10px;
+}
+
+/* DATE AND BUTTONS CARDS NOTICES*/
 
 .list-notices > div > div > div {
   display: flex;
   justify-content: space-between;
 }
 
-/* DATE AND BUTTONS CARDS NOTICES*/
-
 .list-notices > div > div > div > div{
   display: flex;
   gap: 10px;
-  color: gray;
+  color: #6C757D;
 }
 
 .list-notices > div > div > div > div i:first-child{
   color: #E03E45;
 }
 
-/* SYSTEM AND PROCESS SECTION */
+/* ASIDE CONTENT */
+
 aside {
   display: grid;
   gap: 20px;
   grid-template-rows: 370px 500px;
 }
 
-
-h5 {
-  border-bottom: 1px solid gray;
-  padding-bottom: 15px;
-}
-
-
 /* SYSTEM AND PROCESS SECTION */
 
-
-.system-and-process > div {
+.system-and-process > div:last-child{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px;
 }
 
-
-.system-and-process > div > div{
+.system-and-process > div:last-child > div{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,40 +247,55 @@ h5 {
 
   width: 100%;
   height: 80px;
+
+  cursor: pointer;
   background-color: #fff;
   color: #33A76F;
-  box-shadow: 2px 2px 2px 1px  gainsboro;
+  box-shadow: 0 4px 15px gainsboro;
   border-radius: 6px;
-  cursor: pointer
 }
 
-.system-and-process > div > div:hover {
+.system-and-process > div:last-child > div:hover {
   color: #fff;
   background: linear-gradient(90deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 74%);
 }
 
-.system-and-process > div > div i {
+.system-and-process > div:last-child > div i {
   font-size: 30px;
   margin-bottom: 2px;
 
 }
 
-.system-and-process > div > div small {
+.system-and-process > div:last-child > div small {
   font-weight: bold;
 }
 
 /* SECTION BIRTHDAYS */
 
-.birthdays > section > div {
-  display: grid;
+.birthdays .border-bottom h5 {
+  padding: 15px;
+}
+
+.birthdays > section > div:not(div:first-child) {
+  display: flex;
   align-items: center;
-  grid-template-columns: 1fr 2fr;
+  padding: 0 20px;
+  gap: 30px;
   height: 120px;
   border-bottom: 1px solid gainsboro;
 }
 
-.birthdays > section > div img {
-  width: 50%;
+.birthdays > section > div:not(div:first-child) img {
+  width: 18%;
+  max-width: 100%;
   border-radius: 100%;
-  justify-self: center;
+}
+
+.birthdays > section > div:not(div:first-child) > div h4 {
+  margin-bottom: 8px;
+}
+
+.birthdays > section > div:not(div:first-child) > div > div i {
+  margin-right: 2px;
+  color: #6D6F6D;
 }
