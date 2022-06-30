@@ -15,7 +15,6 @@
 }
 
 body {
-  height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
@@ -39,7 +38,7 @@ header {
   align-items: center;
 
   padding: 20px 15px;
-  height: 8%;
+  height: 8vh;
   background: url("../assets/bannerheader.png"), linear-gradient(359deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 80%);
   
 }
@@ -148,8 +147,8 @@ main .container {
   padding: 25px 0;
 }
 
-.recent-news, aside {
-  height: 100%;
+.recent-news {
+  padding-bottom: 15px;
 }
 
 .recent-news, .system-and-process, .birthdays{
@@ -221,15 +220,12 @@ main .container {
   color: #E03E45;
 }
 
-/* ASIDE CONTENT */
-
-aside {
-  display: grid;
-  gap: 20px;
-  grid-template-rows: 370px 500px;
-}
-
 /* SYSTEM AND PROCESS SECTION */
+
+.system-and-process {
+  height: 370px;
+  margin-bottom: 20px;
+}
 
 .system-and-process > div:last-child{
   display: grid;
@@ -237,6 +233,7 @@ aside {
   gap: 20px;
   width: 100%;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .system-and-process > div:last-child > div{
@@ -271,6 +268,10 @@ aside {
 }
 
 /* SECTION BIRTHDAYS */
+
+.birthdays {
+  min-height: 500px;
+}
 
 .birthdays .border-bottom h5 {
   padding: 15px;
