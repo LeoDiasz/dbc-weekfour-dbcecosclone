@@ -1,0 +1,114 @@
+@media(max-width: 1240px) {
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+}
+
+@media(max-width: 960px) {
+  .container {
+    max-width: 760px;
+  }
+
+  main .container {
+    grid-template-columns: 100%;
+  }
+
+  aside {
+    grid-area: 1;
+  }
+
+  .birthdays > section > div:not(div:first-child) img {
+    width: 10%
+  }
+}
+
+@media(max-width: 768px) {
+  .container {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  header nav > div:last-child {
+    width: 200px;
+  }
+
+  header > div:last-child {
+    gap: 10px;
+  }
+ 
+  .system-and-process > div:last-child > div i {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 576px) {
+  .container {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  header > div img {
+    width: 60px;
+  }
+
+  header nav > div:first-child {
+    font-size: 14px;
+  }
+
+  header nav > div:last-child {
+    width: 150px;
+  }
+
+  header > div:last-child i:first-child {
+    font-size: 15px;
+  }
+
+  header > div:last-child i:last-child {
+    font-size: 20px;
+  }
+  
+  .list-notices > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 400px
+  }
+
+  .list-notices > div p {
+    font-size: 12px;
+    padding: 0px 15px;
+  }
+
+  .list-notices > div img{
+    width: 50%;
+    height: 200px;
+    padding-top: 15px;
+
+  }
+
+  .list-notices > div > div > div {
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+  }
+
+  .system-and-process > div:last-child {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .system-and-process > div:last-child > div {
+    height: 50px;
+  }
+  
+  .system-and-process small {
+    font-size: 12px;
+  }
+
+  .birthdays {
+    min-height: 0;
+  }
+  
+  .birthdays > section > div:not(div:first-child) {
+    height: 80px;
+  }
+}
