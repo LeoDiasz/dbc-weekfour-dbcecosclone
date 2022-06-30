@@ -32,7 +32,7 @@ header {
 
   padding: 20px 15px;
   height: 8%;
-  background-color: gray;
+  background: url("../assets/bannerheader.png"), linear-gradient(0deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 74%);
 }
 
 header > div img {
@@ -52,10 +52,16 @@ header > div:first-child,  header > div nav {
 /* HEADER NAV */
 
 header nav div:first-child  {
+  padding: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 20px;
+}
+
+header nav div:first-child:hover {
+ cursor: pointer;
+ background-color: #fff2;
 }
 
 header nav div:first-child span {
@@ -79,6 +85,12 @@ header nav > div:last-child input{
   border: none;
   border-radius: 2px;
   background: #fff2;
+}
+
+header nav > div:last-child input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 1px solid #78b455;
 }
 
 header nav > div:last-child input::placeholder{
@@ -115,7 +127,7 @@ header > div:last-child i:last-child {
 
 main {
   background-color: aliceblue;
-  height: calc(100% - 8%);
+  height: 100%;
 }
 
 main .container {
@@ -129,31 +141,141 @@ main .container {
 }
 
 .recent-news, aside {
-  background-color: #fff;
-  height: 80%;
-  box-shadow: 1px 1px 4px gray;
-  padding: 20px;
+  height: 100%;
 }
 
-.recent-news, .recent-news > div {
+.recent-news, .system-and-process, .birthdays{
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px gainsboro;
+  padding: 15px;
+}
+
+.recent-news, .list-notices {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.recent-news > div > div {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 15px;
-  height: 200px;
+.list-notices {
+  height: 100%;
+}
 
+
+/* CARDS NOTICES */
+
+.list-notices > div {
+  display: flex;
+  gap: 14px;
+  height: 200px;
+  
+  cursor: pointer;
   box-shadow: 1px 1px 4px gray;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+.list-notices > div img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.list-notices > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 15px;
+  height: 100%;
   overflow: hidden;
 }
 
-.recent-news > div > div img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+.list-notices > div > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* DATE AND BUTTONS CARDS NOTICES*/
+
+.list-notices > div > div > div > div{
+  display: flex;
+  gap: 10px;
+  color: gray;
+}
+
+.list-notices > div > div > div > div i:first-child{
+  color: #E03E45;
+}
+
+/* SYSTEM AND PROCESS SECTION */
+aside {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 370px 500px;
+}
+
+
+h5 {
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+}
+
+
+/* SYSTEM AND PROCESS SECTION */
+
+
+.system-and-process > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 20px 10px;
+}
+
+
+.system-and-process > div > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  color: #33A76F;
+  box-shadow: 2px 2px 2px 1px  gainsboro;
+  border-radius: 6px;
+  cursor: pointer
+}
+
+.system-and-process > div > div:hover {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(105,163,99,1) 0%, rgba(63,116,144,1) 74%);
+}
+
+.system-and-process > div > div i {
+  font-size: 30px;
+  margin-bottom: 2px;
+
+}
+
+.system-and-process > div > div small {
+  font-weight: bold;
+}
+
+/* SECTION BIRTHDAYS */
+
+.birthdays > section > div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  height: 120px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.birthdays > section > div img {
+  width: 50%;
+  border-radius: 100%;
+  justify-self: center;
 }
